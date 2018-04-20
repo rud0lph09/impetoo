@@ -1,12 +1,3 @@
-/* --------------------------
-:: Template Name: Colorlib App - App Landing Page 
-:: Template Author: Colorlib
-:: Template Author URI: https://colorlib.com/
-:: Description: Colorlib is a One Page based App Landing Template. It's very clean, creative & beautiful. It's super     responsive & ultra light.
-:: Tags: Colorlib, App Landing, Apps, Responsive App Landing, Bootstrap 4, Free Theme, Free HTML Template, HTML5 Template etc.
-:: Version: v1.0
-:: Created: 11/03/2017
--------------------------- */
 
 /* --- [Master Stylesheet] ----
 :: 1.0 Base CSS Start
@@ -35,9 +26,50 @@
 @import 'css/themify-icons.css';
 @import 'css/ionicons.min.css';
 
-/* --------------------------
-:: 1.0 Base CSS Start
--------------------------- */
+
+
+
+canvas {
+  color: white;
+  overflow: visible;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  
+ 
+}
+
+#canvas, #text {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#text {
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 8vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+}
+#text h2 {
+	opacity: 0.9
+        color: #fff !important;
+        font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+}
 
 * {
     margin: 0;
@@ -50,7 +82,6 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -369,30 +400,6 @@ p {
 
 
 
-/* stcicky css */
-
-.header_area.sticky {
-    background-color: #2A2A2A;
-    -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    height: 81px;
-    position: fixed;
-    top: 0;
-    z-index: 99;
-}
-
-.header_area.sticky .menu_area .navbar-brand {
-    font-size: 50px;
-}
-
-.header_area.sticky .menu_area #nav .nav-link {
-    padding: 23px 15px;
-}
-.header_area.sticky .navbar {
-    padding: 0;
-}
-
-
 /* --------------------------
 :: 3.0 Wellcome Area CSS
 -------------------------- */
@@ -661,59 +668,7 @@ p {
     margin-top: 15px;
 }
 
-/* --------------------------
-:: 6.0 Video Area CSS
--------------------------- */
 
-.video-area {
-    position: relative;
-    z-index: 1;
-    background-position: center center;
-    background-size: cover;
-    border: 20px solid #fff;
-    border-radius: 20px;
-    height: 650px;
-    -webkit-box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
-}
-
-.video-area:after {
-    position: absolute;
-    content: "";
-    top: -20px;
-    left: -20px;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-    border: 1px solid #f1f4f8;
-    z-index: 2;
-    border-radius: 20px;
-}
-
-
-.video-area .video-play-btn a {
-    width: 80px;
-    height: 80px;
-    background-color: #2A2A2A;
-    color: #fff;
-    text-align: center;
-    display: block;
-    font-size: 36px;
-    line-height: 80px;
-    padding-left: 5px;
-    border-radius: 50%;
-    top: 50%;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-
-.video-area .video-play-btn a:hover {
-    background-color: #a865e1;
-    color: #fff;
-}
 
 /* --------------------------
 :: 7.0 Cool Facts Area CSS
@@ -768,240 +723,7 @@ p {
     margin-bottom: 0;
 }
 
-/* --------------------------
-:: 8.0 Screenshots Area CSS
--------------------------- */
 
-.app_screenshots_slides {
-    padding: 0 6%;
-}
-
-.app_screenshots_slides .single-shot {
-    opacity: 0.7;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-    -webkit-transform: scale(0.85);
-    -ms-transform: scale(0.85);
-    transform: scale(0.85)
-}
-
-.app_screenshots_slides .center .single-shot {
-    opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1)
-}
-
-.app-screenshots-area .owl-dot {
-    height: 11px;
-    width: 11px;
-    border: 2px solid #a49fba;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 6px;
-    margin-top: 50px;
-}
-
-.app-screenshots-area .owl-dot.active {
-    background-color: #2A2A2A;
-    border: transparent;
-}
-
-.app-screenshots-area .owl-dots {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-
-/* --------------------------
-:: 9.0 Pricing Plan Area CSS
--------------------------- */
-
-.pricing-plane-area {
-    background: #f5f9fc;
-}
-
-.single-price-plan {
-    background: #ffffff;
-    border: 1px solid #ebebeb;
-    border-radius: 30px 30px 30px 0;
-    margin-bottom: 30px;
-}
-
-.single-price-plan .package-plan {
-    padding: 40px 0;
-    border-radius: 30px 30px 0 0;
-}
-
-.single-price-plan .package-plan > h5 {
-    color: #5b32b4;
-    font-size: 18px;
-}
-
-
-.single-price-plan .package-plan .ca-price h4 {
-    color: #2A2A2A;
-    font-size: 48px;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 0;
-    line-height: 1;
-}
-
-.single-price-plan .package-plan .ca-price span {
-    font-size: 18px;
-    color: #2A2A2A;
-}
-
-.single-price-plan .plan-button > a {
-    background: #726a84;
-    padding: 10px 0;
-    border-bottom-right-radius: 30px;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    display: block;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-}
-
-.single-price-plan .package-description > p {
-    margin-bottom: 0;
-    line-height: 1;
-    padding: 15px 0;
-    border-bottom: 1px solid #ebebeb;
-}
-
-.single-price-plan .package-description > p:first-child {
-    border-top: 1px solid #ebebeb;
-}
-
-.single-price-plan.active .package-plan,
-.single-price-plan.active .plan-button > a,
-.single-price-plan:hover .plan-button > a {
-    background-color: #a865e1;
-}
-
-.single-price-plan.active .package-plan .ca-price > h4,
-.single-price-plan.active .package-plan .ca-price > span,
-.single-price-plan.active .package-plan > h5,
-.single-price-plan.active .plan-button > a {
-    color: #fff;
-}
-
-/* --------------------------
-:: 10.0 Testimonials Area CSS
--------------------------- */
-
-.clients-feedback-area .client-name > h5 {
-    color: #5b32b4;
-    font-size: 22px;
-    margin-top: 5px;
-}
-
-.clients-feedback-area .star-icon > i {
-    font-size: 18px;
-    color: #f1b922;
-}
-
-.clients-feedback-area .client-description > p {
-    max-width: 1010px;
-    margin: auto;
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-.clients-feedback-area .client > i {
-    font-size: 48px;
-    color: #897ceb;
-    margin-bottom: 30px;
-}
-
-.clients-feedback-area .client-name > p {
-    color: #b5aec4;
-}
-
-.clients-feedback-area .slick-dots {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
-}
-
-.clients-feedback-area .slick-dots li button {
-    width: 12px;
-    height: 12px;
-    text-indent: -999999999999999999999999px;
-    border: 3px solid #a49fba;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 5.5px;
-    outline: none;
-}
-
-.clients-feedback-area .slick-dots li.slick-active button {
-    background-color: #2A2A2A;
-    border-color: #2A2A2A;
-}
-
-.clients-feedback-area .slick-slide.client-thumbnail {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 129px;
-}
-
-
-.clients-feedback-area .slick-slide img {
-    display: block;
-    width: 80px !important;
-    height: 80px !important;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.clients-feedback-area .slick-slide.slick-current img {
-    width: 100px !important;
-    height: 100px !important;
-}
-
-.clients-feedback-area .slick-arrow {
-    position: absolute;
-    width: 30px;
-    background-color: #fff;
-    height: 100%;
-    text-align: center;
-    font-size: 24px;
-    color: #b5aec4;
-    display: block;
-    line-height: 550%;
-    left: 0;
-    z-index: 90;
-    cursor: pointer;
-}
-
-.clients-feedback-area .slick-arrow.fa-angle-right {
-    left: auto;
-    right: 0;
-    top: 0;
-}
 
 /* --------------------------
 :: 11.0 CTA Area CSS Start
@@ -1204,6 +926,14 @@ p {
 :: 14.0 Footer Area CSS Start
 -------------------------- */
 
+
+.footer-estatico  {
+  bottom: 0;
+  width: 100%;
+   overflow: hidden;
+
+}
+
 .footer-text > h2 {
     color: #5b32b4;
     font-size: 72px;
@@ -1239,7 +969,7 @@ p {
 }
 
 .footer-menu ul li {
-    display: inline-block;
+    display: block;
 }
 
 .footer-menu ul li a {
@@ -1268,3 +998,4 @@ p {
 .copyright-text > p {
     margin-bottom: 0;
 }
+
